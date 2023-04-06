@@ -4,8 +4,32 @@
     <p>
       GitHub Codespaces <span class="heart">♥️</span> Rails
     </p>
+<%= form_with url: '/home/submit', method: :post do |form| %>
+  <div>
+    <%= form.label :name, 'Nombre:' %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :company, 'Empresa:' %>
+    <%= form.text_field :company %>
+  </div>
+  <div>
+    <%= form.label :email, 'Correo:' %>
+    <%= form.email_field :email %>
+  </div>
+  <div>
+    <%= form.label :phone, 'Teléfono:' %>
+    <%= form.telephone_field :phone %>
+  </div>
+  <div>
+    <%= form.submit 'Enviar' %>
+  </div>
+<% end %>
+
+
     <p class="small">
       Edit <code>app/views/hello/index.html.erb</code> and see changes live!
     </p>
   </header>
 </div>
+2
